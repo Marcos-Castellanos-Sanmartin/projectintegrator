@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Juego</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Proyecto Integrador</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/web/games">Lista de Juegos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/web/games/new">Añadir Juego</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/web/games/search">Buscar</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <h1>Buscar Juego</h1>
+    <form th:action="@{/web/games/search}" method="get" class="form-inline justify-content-center mt-4">
+        <div class="form-group">
+            <input type="text" name="query" class="form-control" placeholder="Buscar por Nombre, Autores, Desarrolladores o Fecha de Lanzamiento"
+                   required/>
+        </div>
+        <button type="submit" class="btn btn-primary ml-2">Buscar</button>
+    </form>
+
+    <!-- Resultados de la búsqueda -->
+    <h2>Resultados de Búsqueda</h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Desarrolladores</th>
+            <th>Fecha de Lanzamiento</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!---Mostrar los resultados de la búsqueda--->
+        <tr th:each="game : ${games}">
+            <td th:text="${game.name}"></td>
+            <td th:text="${game.developers}"></td>
+            <td th:text="${game.launchDate}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
