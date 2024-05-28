@@ -1,0 +1,45 @@
+[{
+    "_id": {
+      "$oid": "6655ba757c2c9aed4abc9424"
+    },
+    "developers": "Naughty Dog",
+    "launchDate": "2020-06-19",
+    "name": "The Last of Us Part II",
+    "_class": "com.example.proyectointegrador.model.games"
+  },
+  {
+    "_id": {
+      "$oid": "6655ba827c2c9aed4abc9426"
+    },
+    "developers": "CD Projekt Red",
+    "launchDate": "2020-12-10",
+    "name": "Cyberpunk 2077",
+    "_class": "com.example.proyectointegrador.model.games"
+  },
+  {
+    "_id": {
+      "$oid": "6655ba897c2c9aed4abc9428"
+    },
+    "developers": "Rockstar North",
+    "launchDate": "2013-09-17",
+    "name": "Grand Theft Auto V",
+    "_class": "com.example.proyectointegrador.model.games"
+  },
+  {
+    "_id": {
+      "$oid": "6655ba907c2c9aed4abc942a"
+    },
+    "developers": "Nintendo EPD",
+    "launchDate": "2017-03-03",
+    "name": "The Legend of Zelda: Breath of the Wild",
+    "_class": "com.example.proyectointegrador.model.games"
+  },
+  {
+    "_id": {
+      "$oid": "6655ba987c2c9aed4abc942c"
+    },
+    "developers": "Mojang Studios",
+    "launchDate": "2011-11-18",
+    "name": "Minecraft",
+    "_class": "com.example.proyectointegrador.model.games"
+  }]
